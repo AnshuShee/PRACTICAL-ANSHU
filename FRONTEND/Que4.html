@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Hide/Show</title>
+</head>
+<body>
+
+    <button id="btn">Hide Image</button>
+    <img id="img" src="rome.avif" width="300">
+
+    <script>
+        let btn = document.getElementById("btn");
+        let img = document.getElementById("img");
+
+        if (sessionStorage.getItem("visible") === "block" ) {
+            img.style.display = "none";
+            btn.textContent = "Show Image";
+        }
+
+        btn.onclick = function() {
+            if (img.style.display === "none") {
+                img.style.display = "block";
+                btn.textContent = "Hide Image";
+                sessionStorage.setItem("visible");
+            } else {
+                img.style.display = "none";
+                btn.textContent = "Show Image";
+                sessionStorage.setItem("visible");
+            }
+        };
+    </script>
+
+</body>
+</html>
