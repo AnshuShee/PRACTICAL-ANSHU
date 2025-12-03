@@ -23,11 +23,11 @@
             if (img.style.display === "none") {
                 img.style.display = "block";
                 btn.textContent = "Hide Image";
-                sessionStorage.setItem("visible");
+                sessionStorage.setItem("visible").value;
             } else {
                 img.style.display = "none";
                 btn.textContent = "Show Image";
-                sessionStorage.setItem("visible");
+                sessionStorage.setItem("visible").value;
             }
         };
     </script>
